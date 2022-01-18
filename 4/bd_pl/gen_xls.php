@@ -60,13 +60,13 @@
       $type = $fetch_pl["type"];
     }
 
-    $pdf -> Cell(5, 5, $i, 1, 0, "C");
-    $pdf -> Cell(30, 5, $name_app, 1, 0, "C");
-    $pdf -> Cell(30, 5, $ver, 1, 0, "C");
-    $pdf -> Cell(30, 5, $name_developer, 1, 0, "C");
-    $pdf -> Cell(30, 5, $city, 1, 0, "C");
-    $pdf -> Cell(30, 5, $exec, 1, 0, "C");
-    $pdf -> Cell(30, 5, $type, 1, 1, "C");
+    $sheet -> SetCellValue("A".($i+2), $i);
+    $sheet -> SetCellValue("B".($i+2), $name_app);
+    $sheet -> SetCellValue("C".($i+2), $ver);
+    $sheet -> SetCellValue("D".($i+2), $name_developer);
+    $sheet -> SetCellValue("E".($i+2), $city);
+    $sheet -> SetCellValue("F".($i+2), $exec);
+    $sheet -> SetCellValue("G".($i+2), $type);
   }
 
   $writer = new Xlsx($spreadsheet);
