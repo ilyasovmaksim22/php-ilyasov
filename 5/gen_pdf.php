@@ -1,9 +1,14 @@
 <?php
+session_start();
+if(!$_SESSION["rule"]) header("Location: .");
+?>
+
+<?php
   $conn = mysqli_connect("eu-cdbr-west-02.cleardb.net","b7cf324568026c","90ce335c", "heroku_666d3fc091d73be") or die ("Невозможно подключиться к серверу");
   mysqli_query($conn, "SET NAMES cp1251");
 
-  define('FPDF_FONTPATH',"../../fpdf/font/");
-  require("../../fpdf/fpdf.php");
+  define('FPDF_FONTPATH',"../fpdf/font/");
+  require("../fpdf/fpdf.php");
   
   $pdf = new FPDF();
   $pdf -> AddPage();

@@ -1,4 +1,6 @@
 <?php
+  session_start();
+  if(!$_SESSION["rule"]) header("Location: .");
   header("Expires: Mon, 1 Apr 1974 05:00:00 GMT");
   header("Last-Modified: " . gmdate("D,d M YH:i:s") . " GMT");
   header("Cache-Control: no-cache, must-revalidate");
@@ -6,7 +8,7 @@
   header("Content-type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
   header("Content-Disposition: attachment; filename=ilyasov_11.xlsx");
 
-  require "../../vendor/autoload.php";
+  require "../vendor/autoload.php";
 
   use PhpOffice\PhpSpreadsheet\Spreadsheet;
   use PhpOffice\PhpSpreadsheet\Writer\Xlsx;

@@ -2,6 +2,11 @@
 
 <?php
 session_start();
+if(!$_SESSION["rule"]) header("Location: .");
+?>
+
+<?php
+session_start();
 if($_SESSION["rule"] != 2) header("Location: .");
 ?>
 
