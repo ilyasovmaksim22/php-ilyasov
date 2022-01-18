@@ -74,7 +74,7 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
  echo "<td>" . $row["id"] . "</td>";
  echo "<td>" . $row["id_pl"] . "</td>";
  echo "<td>" . $row["id_developer"] . "</td>";
- echo "<td>" . $row["date"] . "</td>";
+ echo "<td>" . date("d.m.Y", strtotime($row["date"])) . "</td>";
  echo "<td>" . $row["ver"] . "</td>";
  echo "<td>" . $row["name"] . "</td>";
  echo "<td><a href='edit_app.php?id=" . $row["id"]
