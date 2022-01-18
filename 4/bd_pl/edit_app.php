@@ -20,7 +20,7 @@
 print "<form action='save_edit_app.php' metod='get'>";
 print "id Языка программирования: <select name='id_pl'>";
 $result=mysqli_query($conn, "SELECT * FROM pl");
-echo "<option value='".$id_lp."' selected hidden>".$id_pl."</option>";
+echo "<option value='".$id_pl."' selected hidden>".$id_pl."</option>";
 foreach($result as $row)
   echo "<option value='".$row["id"]."'>".$row["id"]."</option>";
 echo "</select>";
@@ -31,7 +31,7 @@ foreach($result as $row)
   echo "<option value='".$row["id"]."'>".$row["id"]."</option>";
 echo "</select>";
 print "<br>Дата создания: <input name='date' type='date'
-value='".$count."'>";
+value='".$date."'>";
 print "<br>Текущая версия: <input name='ver' size='20' type='text'
 value='".$ver."'>";
 print "<br>Название: <input name='name' size='20' type='text'
