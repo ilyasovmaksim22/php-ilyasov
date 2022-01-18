@@ -11,18 +11,18 @@
   $pdf -> AddFont("Arial", "", "arial.php");
   $pdf -> SetFont("Arial", "", "18");
 
-  $pdf -> Cell(150, 10, "Приложения", 1, 1, "C");
+  $pdf -> Cell(185, 10, "Приложения", 1, 1, "C");
  
   $pdf -> AddFont("Arial", "", "arial.php");
   $pdf -> SetFont("Arial", "", "6");
 
   $pdf -> Cell(5, 5, "№", 1, 0, "C");
-  $pdf -> Cell(25, 5, "Название приложения", 1, 0, "C");
-  $pdf -> Cell(25, 5, "Текущая версия", 1, 0, "C");
-  $pdf -> Cell(25, 5, "Название разработчика", 1, 0, "C");
-  $pdf -> Cell(20, 5, "Город", 1, 0, "C");
-  $pdf -> Cell(25, 5, "Тип выполнения", 1, 0, "C");
-  $pdf -> Cell(25, 5, "Тип (комп. / интер.)", 1, 1, "C");
+  $pdf -> Cell(30, 5, "Название приложения", 1, 0, "C");
+  $pdf -> Cell(30, 5, "Текущая версия", 1, 0, "C");
+  $pdf -> Cell(30, 5, "Название разработчика", 1, 0, "C");
+  $pdf -> Cell(30, 5, "Город", 1, 0, "C");
+  $pdf -> Cell(30, 5, "Тип выполнения", 1, 0, "C");
+  $pdf -> Cell(30, 5, "Тип (комп. / интер.)", 1, 1, "C");
 
   $pdf -> SetFont("Arial", "", "5");
 
@@ -47,12 +47,12 @@
     }
 
     $pdf -> Cell(5, 5, $i, 1, 0, "C");
-    $pdf -> Cell(25, 5, $name_app, 1, 0, "C");
-    $pdf -> Cell(25, 5, $ver, 1, 0, "C");
-    $pdf -> Cell(25, 5, $name_developer, 1, 0, "C");
-    $pdf -> Cell(20, 5, $city, 1, 0, "C");
-    $pdf -> Cell(25, 5, $exec, 1, 0, "C");
-    $pdf -> Cell(25, 5, $type, 1, 1, "C");
+    $pdf -> Cell(30, 5, $name_app, 1, 0, "C");
+    $pdf -> Cell(30, 5, $ver, 1, 0, "C");
+    $pdf -> Cell(30, 5, $name_developer, 1, 0, "C");
+    $pdf -> Cell(30, 5, $city, 1, 0, "C");
+    $pdf -> Cell(30, 5, $exec, 1, 0, "C");
+    $pdf -> Cell(30, 5, $type, 1, 1, "C");
 }
 
 $pdf -> Output("ilyasov_11.pdf", "D");
