@@ -10,7 +10,7 @@
  mysqli_query($conn, 'SET NAMES cp1251');
  $rows=mysqli_query($conn, "SELECT * FROM app WHERE id=".$_GET['id']);
  while ($st = mysqli_fetch_array($rows)) {
- $id_lp=$st["id_lp"];
+ $id_pl=$st["id_pl"];
  $id_developer=$st["id_developer"];
  $date=$st["date"];
  $ver=$st["ver"];
