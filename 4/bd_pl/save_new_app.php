@@ -2,14 +2,15 @@
 
 <?php
  // Подключение к базе данных:
- $conn = mysqli_connect("eu-cdbr-west-02.cleardb.net","b844245c408b92","a1683317", "heroku_1f01e7efa26acd8") or die ("Невозможно подключиться к серверу");
+ $conn = mysqli_connect("eu-cdbr-west-02.cleardb.net","b7cf324568026c","90ce335c", "heroku_666d3fc091d73be") or die ("Невозможно подключиться к серверу");
  mysqli_query($conn, 'SET NAMES cp1251'); // Тип кодировки
  // Строка запроса на добавление записи в таблицу:
- $sql_add = "INSERT INTO alien SET name='" . $_GET['name']
-."', info='".$_GET['info'] . "'";
+ $sql_add =  $sql_add = "INSERT INTO app SET id_lp='" . $_GET['id_lp']
+."', id_developer='".$_GET['id_developer']."', date='".$_GET['date']."', ver='".$_GET['ver']."', name='".$_GET['name']."'";
  mysqli_query($conn, $sql_add); // Выполнение запроса
  if (mysqli_affected_rows($conn)>0) // если нет ошибок при выполнении запроса
  { print "<p>Запись сохранена.";
  print "<p><a href=\"index.php\"> Вернуться </a>"; }
- else { print "Ошибка сохранения. <a href=\"index.php\"> Вернуться </a>"; }
+ else { print "Ошибка сохранения. <a href=\"index.php\">
+Вернуться </a>"; }
 ?>
