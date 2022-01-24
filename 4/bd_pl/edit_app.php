@@ -18,7 +18,6 @@
  }
 
 print "<form action='save_edit_app.php' metod='get'>";
-print "id языка программировани€: <select name='id_pl'>";
 
 print "<br>id языка программировани€: <select name='id_pl'>";
 $result=mysqli_query($conn, "SELECT * FROM pl");
